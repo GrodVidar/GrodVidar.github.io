@@ -1,0 +1,17 @@
+body{
+  background-color: #000;
+}
+
+h1{
+  font-family: cursive;
+  font-size: 180%;
+  text-align: center;
+  color: #990000;
+}
+
+#code{
+  background-color: lime;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+}

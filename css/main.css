@@ -1,7 +1,7 @@
 body
 {
     background-color: black;
-    
+
 }
 h1
 {
@@ -19,9 +19,9 @@ a
     background-color: lime;
     color:red;
     padding:20px;
+    text-transform: capitalize;
 }
 #entry
 {
-    text-align: center;
     color: lime;
 }
