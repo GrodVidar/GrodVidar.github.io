@@ -5,10 +5,13 @@ body
 }
 h1
 {
+    font: 200%;
+    text-align: center;
     color: red;
 }
 a
 {
+    text-align: center;
     color: purple;
 }
 #link
@@ -19,5 +22,6 @@ a
 }
 #entry
 {
+    text-align: center;
     color: lime;
 }
