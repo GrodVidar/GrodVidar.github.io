@@ -9,9 +9,20 @@ h1{
   color: #990000;
 }
 
-#code{
+div{
   background-color: lime;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 10%;
+  margin-left: 38%;
+  margin-right: 38%;
+  margin-top: 1%;
+  margin-bottom: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+form{
+  text-align: center;
+}
+
+input[type="number"]{
+  width:80px;
 }

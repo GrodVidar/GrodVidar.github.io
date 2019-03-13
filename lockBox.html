@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="lockBoxStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/lockBoxStyle.css">
     <title>Lock Box</title>
   </head>
   <body>
     <h1>GrodVidars Lock Box Project</h1>
-    <div class="code">
-      <form method="post">
-        <input type="text" name="code">
+    <div>
+      <form autocomplete="off">
+        <label for="code">Enter Passcode</label>
+        <input id="code" type="number" required autofocus max="9999" min="0" name="code">
         <input type="submit">
       </form>
     </div>
