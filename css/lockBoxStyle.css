@@ -11,18 +11,23 @@ h1{
   color: #990000;
 }
 
-div{
-  background-color: lime;
-  margin-left: 38%;
-  margin-right: 38%;
-  margin-top: 1%;
-  margin-bottom: 50%;
+#outer{
+
+}
+
+#inner{
+  background-color: #1611FD;
+  margin-left: 3%;
+   margin-right: 80%;
+  margin-top: 5%;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
+  /* padding-right: 200px; */
 }
 
 form{
-  text-align: center;
+  text-align: left;
+  margin-left: 10%;
 }
 
 input[type="number"]{
