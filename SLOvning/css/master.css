@@ -1,0 +1,14 @@
+body{
+    background-image: url("https://sl.se/Resources/img/sl_logo_fb.png");
+}
+div{
+    background: black;
+    color: red;
+    margin: auto;
+    width: 50%;
+    border-style:solid;
+    padding: 10px;
+}
+strong{
+    color: lime;
+}
