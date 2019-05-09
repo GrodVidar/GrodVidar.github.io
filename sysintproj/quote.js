@@ -1,5 +1,5 @@
 var qOfTday = document.getElementById("qOfTday");
-const quoteUrl = "http://quotes.rest/qod.json";
+const quoteUrl = "https://quotes.rest/qod.json";
 
 function getQuote()
 {
