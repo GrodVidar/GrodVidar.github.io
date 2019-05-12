@@ -3,6 +3,7 @@ var postUrl = "https://5cd130b0d4a78300147be599.mockapi.io/Info";
 
 function postInfo()
 {
+    var frm = document.getElementById("postForm");
     var genders = document.getElementsByName("gender");
     var userMail = document.getElementById("userMail").value;
     var userName = document.getElementById("userName").value;
@@ -27,4 +28,6 @@ function postInfo()
     })
     .then(postRes => postRes.json())
     .then(postRes => console.log(postRes))
+    frm.reset();
+    return false;
 }

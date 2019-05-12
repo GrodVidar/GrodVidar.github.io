@@ -4,39 +4,63 @@ body{
 
 #quote {
     width: auto;
-    height: auto;
+    height: 65px;
     grid-area: quoteDiv;
     background-color: beige;
+    text-align: center;
 }
 
 #qOfTday {
-    margin-left: 100px;
-    margin-right: 100px;
+    /*margin-left: 100px;
+    margin-right: 100px;*/
+    display: inline-block;
+    
     margin-top: 17px;
     margin-bottom: 17px;
     font-style: italic;
     font-size: 22px;
+    text-align: center;
     background-color: white;
 }
 
 #weatherDiv {
     background-color: white;
     grid-area: weatherDiv;
+    height: 45px;
     border: solid 2px black;
     padding: 2px 5px 2px 5px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     margin-right: auto;
+
+}
+
+p {
+    display: inline;
+}
+
+#iconImg {
+    size: 50px;
+}
+
+.pClass{
+    margin-bottom: 50px;
+}
+
+#pDiv {
+    float:left;
+    margin-top: 15px;
 
 }
 
 #clockDiv {
     background-color: white;
     grid-area: clockDiv;
+    height: 45px;
     border: solid 2px black;
-    padding: 2px 5px 2px 5px;
+    padding: 8px 5px 2px 5px;
     margin-bottom: 20px;
     margin-left: auto;
-    text-align: right;
+    text-align: left;
 
 }
 
@@ -60,18 +84,25 @@ body{
     margin-left: 30px;
     border: solid 2px black;
     padding-bottom: 10px;
+    padding-top: 8px;
     margin-right: 200px;
     background-color: #ffffff;
 }
 
 #station {
     margin-left: 7px;
+    margin-top: 5px;
+}
+
+#slknapp {
+    margin-left: 10px;
 }
 
 #question {
     color: black;
     margin-left: 15px;
     margin-bottom: 8px;
+    margin-top: 15px;
 }
 
 #mainDiv {
@@ -93,6 +124,7 @@ body{
     grid-area: factDiv;
     width: 550px;
     height: 300px;
+    margin-left: 78px;
 }
 
 #factmini {
@@ -100,8 +132,9 @@ body{
     margin-left: 10px;
     margin-right: 5px;
     border: solid 2px black;
-    padding: 5px 5px 5px 10px;
-    min-height: 50px;
+
+    padding: 15px 5px 15px 20px;
+    min-height: 20px;
     background-color: white;
 }
 
@@ -129,7 +162,11 @@ body{
 
 #urbanForm {
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 8px;
+}
+
+#urbanknapp {
+    margin-left: 10px;
 }
 
 #urbanMain {
@@ -149,7 +186,9 @@ body{
 }
 
 #postOuter {
+    margin-left: 80px;
     grid-area: postDiv;
+    width: 545px;
     border: solid 2px black;
     background-color: white;
     text-align: center;

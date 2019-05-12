@@ -9,7 +9,7 @@ function setUrl()
     mainDiv.innerHTML = null;
     var g_station = document.getElementById('station').value;
     hpurl = "https://cors-anywhere.herokuapp.com/https://api.sl.se/api2/typeahead.json?key="+ hpKey +"&searchstring=" + g_station +"&stationsonly=True&maxresults=1";
-    console.log("url: " + hpurl);
+    //console.log("url: " + hpurl);
     fetch(hpurl)
         .then(response => response.json())
             .then(data =>
@@ -17,7 +17,7 @@ function setUrl()
                 var key = data.ResponseData[0].SiteId;
                 //console.log(key);
                 slurl = "https://cors-anywhere.herokuapp.com/https://api.sl.se/api2/realtimedeparturesV4.json?key="+ slKey +"&siteid="+ key +"&timewindow=20";
-                console.log(slurl);
+                //console.log(slurl);
                 fetch(slurl)
                     .then((resp) => resp.json())
                         .then(function(data)
