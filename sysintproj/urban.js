@@ -1,4 +1,5 @@
-
+//Function that is called when user inputs anything in the UrbanDictionary part of the HTML
+//Takes input from user then gets information from UD.
 function searchUrban()
 {
     var searchWord = document.getElementById('searchString').value;
@@ -20,6 +21,7 @@ function searchUrban()
     .then(urbanInfo =>
     {
         var urbanString = urbanInfo.list[0].definition;
+        //links to other words in UD starts with '[' and ends with ']' with use of regex we remove these.
         urbanString = urbanString.replace(/\[/g,'');
         urbanString = urbanString.replace(/\]/g,'');
         urbanDivider.innerHTML = `About ${searchWord}: ${urbanString}`;

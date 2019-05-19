@@ -15,7 +15,6 @@
         </div>
         <script src="weather.js"></script>
         <div id="clockDiv"></div>
-        <script src="clock.js"></script>
         <div id="quote">
             <div id="qOfTday"></div>
             <script src="quote.js"></script>
@@ -23,7 +22,7 @@
     </div>
     <div class="grid2">
         <div id="outer">
-            <form id="hplats" onsubmit="return false;">
+            <form autocomplete="off" id="hplats" onsubmit="return false;">
                 <p id="question">Enter Metro-Station</p>
                 <input type="text" id="station">
                 <input type="submit" id="slknapp" onclick="setUrl()">
@@ -32,20 +31,20 @@
         </div>
         <div id="urbanOuter">
             <img id="urbanBild" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/UD_logo-01.svg/1280px-UD_logo-01.svg.png">
-            <form id="urbanForm" onsubmit="return false;">
+            <form autocomplete="off" id="urbanForm" onsubmit="return false;">
                 <input type="text" id="searchString">
                 <input id="urbanknapp" type="submit" onclick="searchUrban()">
             </form>
                 <div id="urbanMain"></div>
         </div>
         <div id="fact">
-            <button type="button" id="factButton" onclick="getFact()">Get random fact!</button>
+            <button type="button" id="factButton" onclick="getFact()">Get Random Fact!</button>
             <div id="factmini"></div>
             <script src="fact.js"></script>
         </div>
         <div id="postOuter">
             <h3>GIVE ME YOUR INFORMATION! >:)</h3>
-            <form id="postForm" onsubmit="return false;">
+            <form autocomplete="off" id="postForm" onsubmit="return false;">
                 <label for="userName">Name: </label>
                 <input type="text" id="userName" required placeholder="Enter Name"><br>
                 <label for="userMail">Email: </label>
@@ -69,5 +68,6 @@
         <script type="text/javascript" src="post.js"></script>
         <script type="text/javascript" src="urban.js"></script>
         <script type="text/javascript" src="script.js"></script>
+        <script src="clock.js"></script>
     </body>
 </html>
