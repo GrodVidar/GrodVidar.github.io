@@ -1,4 +1,4 @@
-const url = "http://5cd130b0d4a78300147be599.mockapi.io/Score";
+const url = "https://5cd130b0d4a78300147be599.mockapi.io/Score";
 
 var hiscore = document.getElementById("highScore");
 fetch(url)
