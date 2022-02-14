@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mammas Miniräknare</title>
+</head>
+
+<body>
+  <div class="container" style="margin-top: 10px; max-width: 950px">
+    <div class="fields" style="overflow: hidden;">
+      <input type="file" id="file-select" accept=".csv" style="display: none;" />
+      <div class="row">
+        <div class="col-4">
+          <button class="btn btn-info ml-3" id="loadButton">Ladda upp fil</button>
+        </div>
+        <div class="col-4"></div>
+        <div class="col-4">
+          <button class="btn btn-info" id="saveButton" onclick="saveValues()">Spara resultat</button>
+        </div>
+      </div>
+      <form>
+        <label for="newCost" class="form-label" style="margin-right: 5px">Nya lägenhetens kostnad *</label>
+        <div class="mb-3 input-group">
+          <input type="number" class="form-control writable" style="text-align: right;" id="newCost" aria-describedby="basic-addon1" required>
+          <span class="input-group-text" id="basic-addon1">miljoner kr</span>
+
+        </div>
+        <label for="newRent" class="form-label" style="margin-right: 5px">Nya lägenhetens hyra *</label>
+        <div class="mb-3 input-group">
+          <input type="number" class="form-control writable" id="newRent" style="text-align: right;" aria-describedby="basic-addon2" required>
+          <span class="input-group-text" id="basic-addon2">kr/månad</span>
+        </div>
+        <label for="newGarage" class="form-label" style="margin-right: 5px;">Ny garagekostnad</label>
+        <div class="mb-3 input-group">
+          <input type="number" class="form-control writable" id="newGarage" style="text-align: right;" aria-describedby="basic-addon3">
+          <span class="input-group-text" id="basic-addon3">kr/månad</span>
+        </div>
+        <label for="loanEstimate" class="form-label" style="margin-right: 5px">Hur mycket du tänkt ta i lån</label>
+        <div class="mb-3 input-group">
+          <input type="number" class="form-control writable" id="loanEstimate" style="text-align: right;" value="2.4" aria-describedby="basic-addon35">
+          <span class="input-group-text" id="basic-addon35">miljoner kr</span>
+        </div>
+        <label for="interest" class="form-label" style="margin-right: 5px">Ränta på lån</label>
+        <div class="mb-3 input-group">
+          <input type="number" class="form-control writable" id="interest" style="text-align: right;" value="1.6" aria-describedby="basic-addon4">
+          <span class="input-group-text" id="basic-addon4">%</span>
+        </div>
+      </form>
+    </div>
+    <div id="answers">
+      <h2>Resultat:</h2>
+      <label for="interestCostPre" class="form-label" style="margin-right: 5px">Räntans kostnad</label>
+      <div class="mb-3 input-group">
+        <input type="text" readonly class="form-control" id="interestCostPre" style="text-align: right;" aria-describedby="basic-addon5">
+        <span class="input-group-text" id="basic-addon5">kr/månad</span>
+      </div>
+      <label for="interestCostPost" class="form-label" style="margin-right: 5px">Ränta efter ränteavdrag</label>
+      <div class="mb-3 input-group">
+        <input type="text" readonly class="form-control" id="interestCostPost" style="text-align: right;" aria-describedby="basic-addon6">
+        <span class="input-group-text" id="basic-addon6">kr/månad</span>
+      </div>
+      <label for="totalCostPre" class="form-label" style="margin-right: 5px">Total kostnad före ränteavdrag</label>
+      <div class="mb-3 input-group">
+        <input type="text" readonly class="form-control" id="totalCostPre" style="text-align: right;" aria-describedby="basic-addon7">
+        <span class="input-group-text" id="basic-addon7">kr/månad</span>
+      </div>
+      <label for="totalCostPost" class="form-label" style="margin-right: 5px">Total kostnad efter ränteavdrag</label>
+      <div class="mb-3 input-group">
+        <input type="text" readonly class="form-control" id="totalCostPost" style="text-align: right;" aria-describedby="basic-addon8">
+        <span class="input-group-text" id="basic-addon8">kr/månad</span>
+      </div>
+      <label for="cheaperThan" class="form-label" style="margin-right: 5px">Billigare än Täppgränd 22</label>
+      <div class="mb-3 input-group">
+        <input type="text" readonly class="form-control" id="cheaperThan" style="text-align: right;" aria-describedby="basic-addon9">
+        <span class="input-group-text" id="basic-addon9">kr/månad</span>
+      </div>
+      <label for="moneyLeft" class="form-label" style="margin-right: 5px">Pengar på kontot från vinst</label>
+      <div class="mb-3 input-group">
+        <input type="text" readonly class="form-control" id="moneyLeft" style="text-align: right;" aria-describedby="basic-addon10">
+        <span class="input-group-text" id="basic-addon10">kr</span>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
