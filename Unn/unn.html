@@ -7,12 +7,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet"/>
   </head>
-  <body background="bg.jpg">
+  <body>
     <div class="container">
+      <div id="congrats">
         <h1>GRATTIS UNN!!</h1>
         <h2>Du klarade det! Du har vunnit:</h2>
-        <h2>2000:- till en tatuering</h2>
+        <h2 id="prize">32-30-30-30-3A-2D-20-74-69-6C-6C-20-65-6E-20-74-61-74-75-65-72-69-6E-67</h2>
+      </div>
+        <div id="problem" style="display:none;">
+          <h3>ÅHH NAIIII!!!</h3>
+          <h3>Verkar som att priset har blivit krypterat!!!</h3>
+        </div>
+        <div id="solution" style="display:none;">
+          <h3>För att verifiera att du är du måste du besvara dessa säkerhetsfrågor/gåtor ☺</h3>
+            <ol>    
+              <li>
+                <span class="question">
+                  Något som Egil har 1 av, Du 2 av, Joar 1 av, Vidar 0 av, Saga 0 av
+                </span>
+                <input class="form-control" placeholder="Vad är det vi letar efter?" name="q1" id="q1" type="text">
+                <p id="q1error" style="display:none; color:red">Fel svar</p>
+              </li>
+              <li>
+                <span class="question">
+                  Något som Egil har 2 av, Du 2 av, Joar 0 av, Vidar 0 av, Saga 1 av
+                </span>
+                <input class="form-control" placeholder="Vad är det vi letar efter?" type="text" name="q2" id="q2">
+                <p id="q2error" style="display:none; color:red">Fel svar</p>
+              </li>
+              <li>
+                <span class="question">
+                  Något som Egil har 0 av, Du 2 av, Joar 0 av, Vidar 5 av, Saga 9 av
+                </span>
+                <input class="form-control" placeholder="Vad är det vi letar efter?" type="text" name="q3" id="q3">
+                <p id="q3error" style="display:none; color:red">Fel svar</p>
+              </li>
+            </ol>
+            <button class="btn btn-secondary" onclick="checkAnswers()">Kolla svar</button>
+            <h2></h2>
+          </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </body>
 </html>
